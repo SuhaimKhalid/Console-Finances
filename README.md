@@ -21,7 +21,7 @@ Execute the code to obtain financial metrics like:
 
 ## Languages 
 
-Html & Javascript.
+
 Javascript is the main Language in which all of the code is written for this project.
 
 ## Deployed page
