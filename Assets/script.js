@@ -92,15 +92,38 @@ console.log("Financial Analysis ");
 console.log("----------------");
 
  // * The total number of months included in the dataset.
-  var totalmonth = finances.length;
-
-  console.log("Total Months: " + totalmonth);
-
-
+  var total_arrays = finances.length;
+  console.log("Total Months: " + total_arrays);
 
 // * The net total amount of Profit/Losses over the entire period.
 
-// * The average of the **changes** in Profit/Losses over the entire period.
+
+
+var total_amount = 0;        //Declare a vaiable to store all amount in one
+
+var previous_month=0;         //Declare a vaiable to store Previous month amount
+var current_month=0;          //Declare a vaiable to store Current month amount
+var each_month_average = 0;   //Declare a vaiable to store Each month average
+var total_average=0;          //Declare a vaiable to store sum up of all each month number
+// Use for loop for iteration in array
+for(var i=0; i<finances.length; i++)
+{
+
+// * Sum up all the amount of the given aray in a single variable
+    total_amount += finances[i][1];
+
+
+
+
+
+}
+
+
+console.log("Total: $" + total_amount); 
+//console.log("Average Change: " + average.toFixed(2));
+
+
+
 //   * You will need to track what the total change in Profit/Losses are from month to month and then find the average.
 //   * (`Total/(Number of months - 1)`)
 
