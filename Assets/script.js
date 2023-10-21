@@ -97,16 +97,17 @@ console.log("----------------");
 
 // * The net total amount of Profit/Losses over the entire period.
 
-var total_amount = 0;        //Declare a vaiable to store all amount in one
+var total_amount = 0;           //Declare a vaiable to store all amount in one
 var previous_month = 0;         //Declare a vaiable to store Previous month amount
 var current_month = 0;          //Declare a vaiable to store Current month amount
-var each_month_average = 0;   //Declare a vaiable to store Each month average
+var each_month_average = 0;     //Declare a vaiable to store Each month average
 var total_average = 0;          //Declare a vaiable to store sum up of all each month number
 
-var min_number = 0;
-var min_date = "";
-var max_number = 0;
-var max_date = "";
+var min_number = 0;             //Delcare a variable to store min number 
+var min_date = "";              //Delcare a variable to store min date 
+var max_number = 0;             //Delcare a variable to store max number   
+var max_date = "";              //Delcare a variable to store max date  
+
 // Use for loop for iteration in array
 for(var i=0; i<finances.length; i++)
 {
@@ -131,6 +132,8 @@ for(var i=0; i<finances.length; i++)
     //   * You will need to track what the total change in Profit/Losses are from month to month and then find the average. (`Total/(Number of months - 1)`)
     var  average = total_average/(finances.length-1);
 
+    // ====================================================================================
+    // Greates Increase
     // * The greatest increase in Profit/Losses (date and amount) over the entire period.
     // First make condition to compare who is the higest amount
     if(each_month_average> max_number)
@@ -139,15 +142,24 @@ for(var i=0; i<finances.length; i++)
         max_date = finances[i][0];         // assing the highest value date to max_date variable
     }
 
-
+    //=======================================================================================
+    // Greates Decrease
+    // * The greatest increase in Profit/Losses (date and amount) over the entire period.
+    // First make condition to compare who is the higest amount
+    if(each_month_average< min_number)
+    {
+        min_number = each_month_average;   // assing the lowest value amount to min_number variable
+        min_date = finances[i][0];         // assing the lowest value date to min_date variable
+    }
     }
 
-}
+} //End of For Loop
 
 
 console.log("Total: $" + total_amount); 
 console.log("Average Change: " + average.toFixed(2));
 console.log("Greatest Increase in Profits/Losses: " + max_date + " ($" + max_number + ")" );
+console.log("Greatest Decrease in Profits/Losses: " + min_date + " ($" + min_number + ")" );
 
 
 
@@ -167,5 +179,9 @@ console.log("Greatest Increase in Profits/Losses: " + max_date + " ($" + max_num
 //   Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
 //   Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
 //   ```
+
+
+
+
 
 // Your final code should print the analysis to the console.
