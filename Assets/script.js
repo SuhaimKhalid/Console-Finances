@@ -112,15 +112,29 @@ for(var i=0; i<finances.length; i++)
 // * Sum up all the amount of the given aray in a single variable
     total_amount += finances[i][1];
 
+    // only run when index goes to second line
+    if(i>0){
 
+    // * The average of the **changes** in Profit/Losses over the entire period.
+    // First we calculate the difference between each mounth profit/losee
+    previous_month= finances[i-1][1];   //Store the value of previous month
+    current_month= finances[i][1];      //Store the value of Current month
 
+    each_month_average = current_month - previous_month;   //Getting average of each month
 
+    //Sum up the all month average to one single variable
+    total_average += each_month_average;    
+           
+    
+    //   * You will need to track what the total change in Profit/Losses are from month to month and then find the average. (`Total/(Number of months - 1)`)
+    var  average = total_average/(finances.length-1);
+    }
 
 }
 
 
 console.log("Total: $" + total_amount); 
-//console.log("Average Change: " + average.toFixed(2));
+console.log("Average Change: " + average.toFixed(2));
 
 
 
