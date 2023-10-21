@@ -129,6 +129,7 @@ for(var i=0; i<finances.length; i++)
 
     // ====================================================================================
     // Greates Increase
+
     // * The greatest increase in Profit/Losses (date and amount) over the entire period.
     // First make condition to compare who is the higest amount
     if(each_month_average > max_number)
@@ -139,6 +140,7 @@ for(var i=0; i<finances.length; i++)
 
     //=======================================================================================
     // Greates Decrease
+    
     // * The greatest increase in Profit/Losses (date and amount) over the entire period.
     // First make condition to compare who is the higest amount
     if(each_month_average < min_number)
