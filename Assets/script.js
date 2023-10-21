@@ -87,15 +87,10 @@ var finances = [
     ['Feb-2017', 671099],
   ];
 
-  
-console.log("Financial Analysis ");
-console.log("----------------");
-
  // * The total number of months included in the dataset.
   var total_arrays = finances.length;
-  console.log("Total Months: " + total_arrays);
 
-// * The net total amount of Profit/Losses over the entire period.
+
 
 var total_amount = 0;           //Declare a vaiable to store all amount in one
 var previous_month = 0;         //Declare a vaiable to store Previous month amount
@@ -111,8 +106,8 @@ var max_date = "";              //Delcare a variable to store max date
 // Use for loop for iteration in array
 for(var i=0; i<finances.length; i++)
 {
-
-// * Sum up all the amount of the given aray in a single variable
+    // * The net total amount of Profit/Losses over the entire period.
+    // * Sum up all the amount of the given aray in a single variable
     total_amount += finances[i][1];
 
     // only run when index goes to second line
@@ -136,7 +131,7 @@ for(var i=0; i<finances.length; i++)
     // Greates Increase
     // * The greatest increase in Profit/Losses (date and amount) over the entire period.
     // First make condition to compare who is the higest amount
-    if(each_month_average> max_number)
+    if(each_month_average > max_number)
     {
         max_number = each_month_average;   // assing the highest value amount to max_number variable
         max_date = finances[i][0];         // assing the highest value date to max_date variable
@@ -146,7 +141,7 @@ for(var i=0; i<finances.length; i++)
     // Greates Decrease
     // * The greatest increase in Profit/Losses (date and amount) over the entire period.
     // First make condition to compare who is the higest amount
-    if(each_month_average< min_number)
+    if(each_month_average < min_number)
     {
         min_number = each_month_average;   // assing the lowest value amount to min_number variable
         min_date = finances[i][0];         // assing the lowest value date to min_date variable
@@ -156,32 +151,15 @@ for(var i=0; i<finances.length; i++)
 } //End of For Loop
 
 
-console.log("Total: $" + total_amount); 
-console.log("Average Change: " + average.toFixed(2));
-console.log("Greatest Increase in Profits/Losses: " + max_date + " ($" + max_number + ")" );
-console.log("Greatest Decrease in Profits/Losses: " + min_date + " ($" + min_number + ")" );
-
-
-
-
-
-
-// * The greatest decrease in Profit/Losses (date and amount) over the entire period.
-
-// When you open your code in the browser your resulting analysis should look similar to the following:
-
-//   ```text
-//   Financial Analysis 
-//   ----------------
-//   Total Months: 86
-//   Total: $38382578
-//   Average Change: -2315.12
-//   Greatest Increase in Profits/Losses: Feb-2012 ($1926159)
-//   Greatest Decrease in Profits/Losses: Sep-2013 ($-2196167)
-//   ```
-
-
-
-
-
-// Your final code should print the analysis to the console.
+console.log("Financial Analysis ");
+console.log("----------------");
+// Display Total Number of month 
+console.log("Total Months: " + total_arrays);
+//Display Total Amount
+console.log("Total: $" + total_amount);      
+//Display Average Change
+console.log("Average Change: " + average.toFixed(2)); 
+//Display Greatest Increase
+console.log("Greatest Increase in Profits/Losses: " + max_date + " ($" + max_number + ")" ); 
+//Display Greatest Decrease
+console.log("Greatest Decrease in Profits/Losses: " + min_date + " ($" + min_number + ")" ); 
