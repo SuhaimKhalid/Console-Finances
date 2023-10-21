@@ -15,14 +15,14 @@ Execute the code to obtain financial metrics like:
 ### (total_arrays): Total length of array.
 ### (total_amount): Total sum up amount of data in array.
 ### (average): Total Average change of data.
-### (max_number & max_date): For higest number and its date in array.
+### (max_number & max_date): For highest number and its date in array.
 ### (min-number & min_date): For lowest number and its date in array.
 
 
 ## Languages 
 
-Html & Javascript
-Javascript is the main Language in which all of the code is written for this project
+Html & Javascript.
+Javascript is the main Language in which all of the code is written for this project.
 
 ## Deployed page
 

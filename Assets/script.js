@@ -107,7 +107,7 @@ var max_date = "";              //Delcare a variable to store max date
 for(var i=0; i<finances.length; i++)
 {
     // * The net total amount of Profit/Losses over the entire period.
-    // * Sum up all the amount of the given aray in a single variable
+    // * Sum up all the amount of the given array in a single variable
     total_amount += finances[i][1];
 
     // only run when index goes to second line
@@ -140,7 +140,7 @@ for(var i=0; i<finances.length; i++)
 
     //=======================================================================================
     // Greates Decrease
-    
+
     // * The greatest increase in Profit/Losses (date and amount) over the entire period.
     // First make condition to compare who is the higest amount
     if(each_month_average < min_number)
